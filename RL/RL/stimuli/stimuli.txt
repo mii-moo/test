@@ -1,0 +1,241 @@
+const stimuli = [
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:0}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:1, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:2, left_right_s2:1, reward_s1:0, reward_s2:1}}
+,
+{stimulus:["<p style='position: absolute; top: 40%;left: 20%'><img src='RL/stimuli/s1.jpeg' width='200px'/></p>","<p style='position: absolute; top: 40%;right: 20%'><img src='RL/stimuli/s2.jpeg' width='200px'/></p>"],
+               data:{left_right_s1:1, left_right_s2:2, reward_s1:0, reward_s2:0}}
+]
